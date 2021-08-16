@@ -14,13 +14,13 @@
             android:exported="true"
             android:label="@string/title_activity_act_ws"
             android:theme="@style/Theme.Unilibre20212.NoActionBar" />
-        <activity android:name=".ActSeekBar" />
+        <activity android:name=".ActListView" />
         <activity android:name=".ActOpciones" />
         <activity android:name=".ActRadioButton" />
         <activity android:name=".ActCheckBox" />
         <activity android:name=".ActButton" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ActListView">
+        <activity android:name=".ActSeekBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

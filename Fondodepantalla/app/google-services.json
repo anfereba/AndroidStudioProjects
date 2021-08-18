@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "868611634398",
+    "project_id": "fondos-de-pantalla-15c9b",
+    "storage_bucket": "fondos-de-pantalla-15c9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868611634398:android:853f957a9a46a5b32e3e4f",
+        "android_client_info": {
+          "package_name": "com.anfereba.fondodepantalla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868611634398-q961ufeml6v9fimc25vb3b747b04c20p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anfereba.fondodepantalla",
+            "certificate_hash": "46cd3f184c3828841ddfabde8cd0121742a362f6"
+          }
+        },
+        {
+          "client_id": "868611634398-k4i6ibh0mj9fdu9ka89iqd2sl2fefgs8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs3jEQpQJUwKLiuSKPuVj-uTyMbEPoWs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868611634398-k4i6ibh0mj9fdu9ka89iqd2sl2fefgs8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:checkableBehavior="single">
+        <!--- Opcion Inicio Admin -->
+        <item
+            android:id="@+id/InicioAdmin"
+            android:title="@string/InicioAdmin"
+            android:icon="@drawable/uno_ico"/>
+        <!--- Opcion Perfil Admin -->
+        <item
+            android:id="@+id/PerfilAdmin"
+            android:title="@string/PerfilAdmin"
+            android:icon="@drawable/dos_ico"/>
+        <!--- Opcion Registrar Admin -->
+        <item
+            android:id="@+id/RegistrarAdmin"
+            android:title="@string/RegistrarAdmin"
+            android:icon="@drawable/tres_ico"/>
+        <!--- Opcion Listar Administradores -->
+        <item
+            android:id="@+id/ListarAdmin"
+            android:title="@string/ListarAdmin"
+            android:icon="@drawable/cuatro_ico"/>
+        <!--- Opcion Cerrar Sesion -->
+        <item
+            android:id="@+id/Salir"
+            android:title="@string/Salir"
+            android:icon="@drawable/cinco_ico"/>
+
+
+
+
+
+    </group>
+
+
+
+</menu>

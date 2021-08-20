@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Fondos de pantalla</string>
     <string name="desarrollador">Desarrollado por: Andres Rendon</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Menu Admin -->
+
+    <string name="InicioAdmin">Inicio</string>
+    <string name="PerfilAdmin">Perfil</string>
+    <string name="RegistrarAdmin">Registrar</string>
+    <string name="ListarAdmin">Lista de administradores</string>
+    <string name="Salir">Cerrar Sesion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

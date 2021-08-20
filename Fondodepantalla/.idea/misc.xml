@@ -4,6 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Andres/AndroidStudioProjects/Fondodepantalla/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/Fondodepantalla/app/src/main/res/layout/activity_main_administrador.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/Fondodepantalla/app/src/main/res/layout/encabezado.xml" value="0.4" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/Fondodepantalla/app/src/main/res/layout/fragment_inicio_admin.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/Fondodepantalla/app/src/main/res/layout/fragment_lista_admin.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/Fondodepantalla/app/src/main/res/layout/fragment_perfil_admin.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/Fondodepantalla/app/src/main/res/layout/fragment_registro_admin.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/Fondodepantalla/app/src/main/res/menu/menu_admin.xml" value="0.264" />
       </map>
     </option>
   </component>

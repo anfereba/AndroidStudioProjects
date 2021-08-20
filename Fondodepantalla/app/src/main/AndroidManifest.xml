@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FondoDePantalla">
         <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+            android:name=".MainActivityAdministrador"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Carga"
             android:exported="true">

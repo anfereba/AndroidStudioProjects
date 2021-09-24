@@ -118,6 +118,7 @@ public class VideoJuegosA extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.Agregar:
                 startActivity(new Intent(VideoJuegosA.this, AgregarVideojuegos.class));
+                finish();
                 break;
             case R.id.Vista:
                 Toast.makeText(this, "Listar Imagenes", Toast.LENGTH_SHORT).show();

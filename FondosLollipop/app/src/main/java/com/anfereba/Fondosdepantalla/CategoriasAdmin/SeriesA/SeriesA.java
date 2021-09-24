@@ -114,7 +114,7 @@ public class SeriesA extends AppCompatActivity {
             case R.id.Agregar:
                 //Toast.makeText(this, "Agregar Imagen", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(SeriesA.this,AgregarSerie.class));
-
+                finish();
                 break;
             case R.id.Vista:
                 Toast.makeText(this, "Listar Imagenes", Toast.LENGTH_SHORT).show();

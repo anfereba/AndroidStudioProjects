@@ -117,6 +117,7 @@ public class MusicaA extends AppCompatActivity {
             case R.id.Agregar:
                 //Toast.makeText(this, "Agregar Imagen", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MusicaA.this,AgregarMusica.class));
+                finish();
                 break;
             case R.id.Vista:
                 Toast.makeText(this, "Listar Imagenes", Toast.LENGTH_SHORT).show();

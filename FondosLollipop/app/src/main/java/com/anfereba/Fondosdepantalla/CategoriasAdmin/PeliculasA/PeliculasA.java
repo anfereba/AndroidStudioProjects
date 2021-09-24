@@ -116,6 +116,7 @@ public class PeliculasA extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.Agregar:
                 startActivity(new Intent(PeliculasA.this,AgregarPelicula.class));
+                finish();
                 break;
             case R.id.Vista:
                 Toast.makeText(this, "Listar Imagenes", Toast.LENGTH_SHORT).show();

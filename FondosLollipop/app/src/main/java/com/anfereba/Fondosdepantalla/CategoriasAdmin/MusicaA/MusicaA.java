@@ -25,7 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MusicaA extends AppCompatActivity {
 
-
     RecyclerView recyclerViewMusica;
     FirebaseDatabase mFirebaseDataBase;
     DatabaseReference mRef;

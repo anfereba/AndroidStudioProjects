@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/drawable-anydpi/calendario_ico.xml" value="0.2703125" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/drawable-anydpi/imagen_ico.xml" value="0.2703125" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/drawable-anydpi/vista_ico_item.xml" value="0.2703125" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/drawable/btn_personalizado.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_agregar_musica.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_agregar_pelicula.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_agregar_series.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_agregar_videojuegos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_inicio_sesion.xml" value="0.25" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_main_administrador.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_musica.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_peliculas.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_video_juegos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/carga.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/encabezado.xml" value="0.4" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_acer_de_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_compartir_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_inicio_admin.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_inicio_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_lista_admin.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_perfil_admin.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_registro_admin.xml" value="0.30275229357798167" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/item_musica.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/item_pelicula.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/item_serie.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/item_videojuegos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/menu/menu_admin.xml" value="0.16" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/menu/menu_agregar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/menu/menu_cliente.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/menu/menu_vista.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

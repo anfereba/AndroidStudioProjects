@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.anfereba.Fondosdepantalla"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    /*LIBRERIAS - EMPIEZA*/
+
+    /*ANIMACIONES*/
+    implementation 'com.airbnb.android:lottie:3.0.1'
+    /*COMPONENTES MATERIAL DESIGN*/
+    implementation 'com.google.android.material:material:1.1.0'
+    /*BASE DE DATOS DE FIREBASE*/
+    implementation 'com.google.firebase:firebase-database:20.0.2'
+    /*AUTENTICACIÓN DE FIREBASE*/
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    /*GESTIONAR IMÁGENES*/
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    /*RECYCLERVIEW*/
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    /*CARDVIEW*/
+    implementation 'androidx.cardview:cardview:1.0.0'
+    /*ALMACENAMIENTO DE FIREBASE*/
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    /*FIREBASE UI*/
+    implementation 'com.firebaseui:firebase-ui-database:4.3.2'
+    /*IMAGEN CIRCULAR*/
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    /*BOTÓN FLOTANTE*/
+    implementation 'com.github.clans:fab:1.6.4'
+    /*GESTIONAR CONEXIÓN A INTERNET*/
+    implementation 'com.novoda:merlin:1.2.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'

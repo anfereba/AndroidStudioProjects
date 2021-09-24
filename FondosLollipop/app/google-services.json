@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "603553331578",
+    "project_id": "fondos-lollipop",
+    "storage_bucket": "fondos-lollipop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603553331578:android:0d9b1dd09c6402ee703ec3",
+        "android_client_info": {
+          "package_name": "com.anfereba.Fondosdepantalla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603553331578-jjqmcrutdvhc43bu30tukr15nk97ubhn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anfereba.Fondosdepantalla",
+            "certificate_hash": "46cd3f184c3828841ddfabde8cd0121742a362f6"
+          }
+        },
+        {
+          "client_id": "603553331578-60g58fshrsrnm6egk0abbngbseioi4e6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgzTdc8CPdA2BHBSWVdXlXItasz_KDrBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603553331578-60g58fshrsrnm6egk0abbngbseioi4e6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

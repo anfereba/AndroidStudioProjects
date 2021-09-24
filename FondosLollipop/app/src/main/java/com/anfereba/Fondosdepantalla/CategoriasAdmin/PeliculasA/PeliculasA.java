@@ -96,8 +96,8 @@ public class PeliculasA extends AppCompatActivity {
                         final String Nombre = getItem(position).getNombre();
                         final String Imagen = getItem(position).getImagen();
 
-                        /*int Vista = getItem(position).getVistas();
-                        String VistaString = String.valueOf(Vista);*/
+                        int Vista = getItem(position).getVistas();
+                        final String VistaString = String.valueOf(Vista);
 
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(PeliculasA.this);
@@ -106,8 +106,12 @@ public class PeliculasA extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if (i == 0){
-                                    Toast.makeText(PeliculasA.this, "Actualizar", Toast.LENGTH_SHORT).show();
-
+                                    //Toast.makeText(PeliculasA.this, "Actualizar", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(PeliculasA.this, AgregarPelicula.class);
+                                    intent.putExtra("NombreEnviado",Nombre);
+                                    intent.putExtra("ImagenEnviada",Imagen);
+                                    intent.putExtra("VistaEnviada",VistaString);
+                                    startActivity(intent);
                                 }
                                 if (i == 1){
                                     EliminarDatos(Nombre,Imagen);
@@ -129,7 +133,7 @@ public class PeliculasA extends AppCompatActivity {
         recyclerViewPelicula.setAdapter(firebaseRecyclerAdapter);
     }
 
-    protected void EliminarDatos(final String NombreActual, final String ImagenActual){
+    private void EliminarDatos(final String NombreActual, final String ImagenActual){
         AlertDialog.Builder builder = new AlertDialog.Builder(PeliculasA.this);
         builder.setTitle("Eliminar");
         builder.setMessage("¿Desea eliminar imagen?");

@@ -1,11 +1,15 @@
 package com.anfereba.Fondosdepantalla.CategoriasAdmin.MusicaA;
 
+import static com.google.firebase.storage.FirebaseStorage.getInstance;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,11 +21,19 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 
+import com.anfereba.Fondosdepantalla.CategoriasAdmin.PeliculasA.PeliculasA;
 import com.anfereba.Fondosdepantalla.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.StorageReference;
 
 public class MusicaA extends AppCompatActivity {
 
@@ -81,7 +93,32 @@ public class MusicaA extends AppCompatActivity {
 
                     @Override
                     public void onItemLongClick(View view, int position) {
-                        Toast.makeText(MusicaA.this, "LONG CLICK", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MusicaA.this, "LONG CLICK", Toast.LENGTH_SHORT).show();
+
+                        final String Nombre = getItem(position).getNombre();
+                        final String Imagen = getItem(position).getImagen();
+
+                        /*int Vista = getItem(position).getVistas();
+                        String VistaString = String.valueOf(Vista);*/
+
+
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MusicaA.this);
+                        String[] opciones = {"Actualizar","Eliminar"};
+                        builder.setItems(opciones, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                if (i == 0){
+                                    Toast.makeText(MusicaA.this, "Actualizar", Toast.LENGTH_SHORT).show();
+
+                                }
+                                if (i == 1){
+                                    EliminarDatos(Nombre,Imagen);
+                                }
+
+                            }
+                        });
+
+                        builder.create().show();
 
                     }
                 });
@@ -93,6 +130,61 @@ public class MusicaA extends AppCompatActivity {
         firebaseRecyclerAdapter.startListening();
         recyclerViewMusica.setAdapter(firebaseRecyclerAdapter);
 
+    }
+
+    private void EliminarDatos(final String NombreActual, final String ImagenActual){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MusicaA.this);
+        builder.setTitle("Eliminar");
+        builder.setMessage("¿Desea eliminar imagen?");
+        builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //Eliminar Imagen de la BD//
+                Query query = mRef.orderByChild("nombre").equalTo(NombreActual);
+                query.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot ds : snapshot.getChildren()){
+                            ds.getRef().removeValue();
+                        }
+                        Toast.makeText(MusicaA.this, "La imagen ha sido eliminada",
+                                Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(MusicaA.this, error.getMessage(),
+                                Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
+                StorageReference ImageSeleccionada = getInstance().getReferenceFromUrl(ImagenActual);
+                ImageSeleccionada.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(MusicaA.this, "Eliminado",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MusicaA.this, e.getMessage(),
+                                Toast.LENGTH_SHORT).show();
+                    }
+
+                });
+            };
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(MusicaA.this, "Cancelado por Administrador",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        builder.create().show();
     }
 
     @Override

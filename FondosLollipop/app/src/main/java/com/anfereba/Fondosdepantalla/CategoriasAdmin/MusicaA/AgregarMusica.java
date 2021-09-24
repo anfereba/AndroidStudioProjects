@@ -50,6 +50,8 @@ public class AgregarMusica extends AppCompatActivity {
 
     ProgressDialog progressDialog;
 
+    String rNombre, rImagen, rVista;
+
     int CODIGO_DE_SOLICITUD_IMAGEN = 5;
 
     @Override
@@ -71,6 +73,7 @@ public class AgregarMusica extends AppCompatActivity {
         mStorageReference = FirebaseStorage.getInstance().getReference();
         DatabaseReference = FirebaseDatabase.getInstance().getReference(RutaDeBaseDeDatos);
         progressDialog = new ProgressDialog(AgregarMusica.this);
+
 
         ImagenAgregarMusica.setOnClickListener(new View.OnClickListener() {
             @Override

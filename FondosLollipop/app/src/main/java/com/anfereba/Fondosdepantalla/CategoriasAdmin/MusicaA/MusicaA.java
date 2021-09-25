@@ -21,7 +21,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 
-import com.anfereba.Fondosdepantalla.CategoriasAdmin.PeliculasA.PeliculasA;
 import com.anfereba.Fondosdepantalla.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -98,8 +97,8 @@ public class MusicaA extends AppCompatActivity {
                         final String Nombre = getItem(position).getNombre();
                         final String Imagen = getItem(position).getImagen();
 
-                        /*int Vista = getItem(position).getVistas();
-                        String VistaString = String.valueOf(Vista);*/
+                        int Vista = getItem(position).getVistas();
+                        final String VistaString = String.valueOf(Vista);
 
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(MusicaA.this);
@@ -108,8 +107,13 @@ public class MusicaA extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if (i == 0){
-                                    Toast.makeText(MusicaA.this, "Actualizar", Toast.LENGTH_SHORT).show();
-
+                                   // Toast.makeText(MusicaA.this, "Actualizar", Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(PeliculasA.this, "Actualizar", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(MusicaA.this, AgregarMusica.class);
+                                    intent.putExtra("NombreEnviado",Nombre);
+                                    intent.putExtra("ImagenEnviada",Imagen);
+                                    intent.putExtra("VistaEnviada",VistaString);
+                                    startActivity(intent);
                                 }
                                 if (i == 1){
                                     EliminarDatos(Nombre,Imagen);

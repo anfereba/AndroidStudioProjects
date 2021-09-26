@@ -11,28 +11,36 @@
         android:theme="@style/Theme.FondosLollipop">
         <activity
             android:name=".CategoriasAdmin.VideoJuegosA.AgregarVideojuegos"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CategoriasAdmin.SeriesA.AgregarSerie"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CategoriasAdmin.MusicaA.AgregarMusica"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CategoriasAdmin.PeliculasA.AgregarPelicula"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CategoriasAdmin.VideoJuegosA.VideoJuegosA"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CategoriasAdmin.MusicaA.MusicaA"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CategoriasAdmin.PeliculasA.PeliculasA"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CategoriasAdmin.SeriesA.SeriesA"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".InicioSesion"
             android:exported="true"

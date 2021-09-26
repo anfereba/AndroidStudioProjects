@@ -112,6 +112,7 @@ public class PeliculasA extends AppCompatActivity {
                                     intent.putExtra("ImagenEnviada",Imagen);
                                     intent.putExtra("VistaEnviada",VistaString);
                                     startActivity(intent);
+                                    finish();
                                 }
                                 if (i == 1){
                                     EliminarDatos(Nombre,Imagen);

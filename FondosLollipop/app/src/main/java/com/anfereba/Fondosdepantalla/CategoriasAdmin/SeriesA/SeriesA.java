@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.anfereba.Fondosdepantalla.CategoriasAdmin.PeliculasA.AgregarPelicula;
 import com.anfereba.Fondosdepantalla.CategoriasAdmin.PeliculasA.PeliculasA;
 import com.anfereba.Fondosdepantalla.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -97,8 +98,8 @@ public class SeriesA extends AppCompatActivity {
                         final String Nombre = getItem(position).getNombre();
                         final String Imagen = getItem(position).getImagen();
 
-                        /*int Vista = getItem(position).getVistas();
-                        String VistaString = String.valueOf(Vista);*/
+                        int Vista = getItem(position).getVistas();
+                        String VistaString = String.valueOf(Vista);
 
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(SeriesA.this);
@@ -107,7 +108,13 @@ public class SeriesA extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if (i == 0){
-                                    Toast.makeText(SeriesA.this, "Actualizar", Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(PeliculasA.this, "Actualizar", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(SeriesA.this, AgregarSerie.class);
+                                    intent.putExtra("NombreEnviado",Nombre);
+                                    intent.putExtra("ImagenEnviada",Imagen);
+                                    intent.putExtra("VistaEnviada",VistaString);
+                                    startActivity(intent);
+                                    finish();
 
                                 }
                                 if (i == 1){

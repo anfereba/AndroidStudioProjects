@@ -25,8 +25,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anfereba.Fondosdepantalla.CategoriasAdmin.PeliculasA.AgregarPelicula;
-import com.anfereba.Fondosdepantalla.CategoriasAdmin.PeliculasA.PeliculasA;
+
 import com.anfereba.Fondosdepantalla.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -144,7 +143,7 @@ public class SeriesA extends AppCompatActivity {
         };
         //Al iniciar la actividad, se va a listar en dos columnas //
 
-        sharedPreferences = SeriesA.this.getSharedPreferences("PELICULAS",MODE_PRIVATE);
+        sharedPreferences = SeriesA.this.getSharedPreferences("Series",MODE_PRIVATE);
         String ordenar_en = sharedPreferences.getString("Ordenar","Dos");
 
         //Elegir el tipo de vista

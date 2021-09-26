@@ -9,8 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,6 +21,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anfereba.Fondosdepantalla.CategoriasAdmin.PeliculasA.AgregarPelicula;
@@ -46,6 +51,9 @@ public class VideoJuegosA extends AppCompatActivity {
     FirebaseRecyclerAdapter<VideoJuego, ViewHolderVideojuegos> firebaseRecyclerAdapter;
     FirebaseRecyclerOptions<VideoJuego> options;
 
+    SharedPreferences sharedPreferences;
+    Dialog dialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +70,8 @@ public class VideoJuegosA extends AppCompatActivity {
 
         mFirebaseDataBase = FirebaseDatabase.getInstance();
         mRef = mFirebaseDataBase.getReference("VIDEOJUEGOS");
+
+        dialog = new Dialog(VideoJuegosA.this);
 
         ListarImagenesVideoJuego();
 
@@ -135,9 +145,23 @@ public class VideoJuegosA extends AppCompatActivity {
                 return viewHolderVideojuegos;
             }
         };
-        recyclerViewVideoJuegos.setLayoutManager(new GridLayoutManager(VideoJuegosA.this,2));
-        firebaseRecyclerAdapter.startListening();
-        recyclerViewVideoJuegos.setAdapter(firebaseRecyclerAdapter);
+
+        //Al iniciar la actividad, se va a listar en dos columnas //
+
+        sharedPreferences = VideoJuegosA.this.getSharedPreferences("Videojuegos",MODE_PRIVATE);
+        String ordenar_en = sharedPreferences.getString("Ordenar","Dos");
+
+        //Elegir el tipo de vista
+        if(ordenar_en.equals("Dos")){
+            recyclerViewVideoJuegos.setLayoutManager(new GridLayoutManager(VideoJuegosA.this,2));
+            firebaseRecyclerAdapter.startListening();
+            recyclerViewVideoJuegos.setAdapter(firebaseRecyclerAdapter);
+        }
+        else if (ordenar_en.equals("Tres")){
+            recyclerViewVideoJuegos.setLayoutManager(new GridLayoutManager(VideoJuegosA.this,3));
+            firebaseRecyclerAdapter.startListening();
+            recyclerViewVideoJuegos.setAdapter(firebaseRecyclerAdapter);
+        }
 
     }
 
@@ -220,10 +244,68 @@ public class VideoJuegosA extends AppCompatActivity {
                 finish();
                 break;
             case R.id.Vista:
-                Toast.makeText(this, "Listar Imagenes", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(this, "Listar Imagenes", Toast.LENGTH_SHORT).show();
+                Ordenar_Imagenes();
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void Ordenar_Imagenes(){
+
+        //Cambio de Letra
+        String ubicacion = "fuentes/sans_negrita.ttf";
+        Typeface tf = Typeface.createFromAsset(VideoJuegosA.this.getAssets(),ubicacion);
+        //Cambio de Letra
+
+        //Declaramos las vistas
+
+        TextView OrdenarTXT;
+        Button Dos_Columnas, Tres_Columnas;
+
+        //Conexion con el cuadro de dialogo
+        dialog.setContentView(R.layout.dialog_ordenar);
+
+        //Inicializar las vistas
+        OrdenarTXT = dialog.findViewById(R.id.OrdenarTXT);
+        Dos_Columnas = dialog.findViewById(R.id.Dos_Columnas);
+        Tres_Columnas = dialog.findViewById(R.id.Tres_Columnas);
+
+        //Cambio de la fuente de letra
+        OrdenarTXT.setTypeface(tf);
+        Dos_Columnas.setTypeface(tf);
+        Tres_Columnas.setTypeface(tf);
+
+        //Evento 2 columnas
+
+        Dos_Columnas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("Ordenar","Dos");
+                editor.apply();
+                recreate();
+                dialog.dismiss();
+            }
+        });
+
+        //Evento 3 columnas
+
+        Tres_Columnas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("Ordenar", "Tres");
+                editor.apply();
+                recreate();
+                dialog.dismiss();
+
+
+            }
+        });
+
+        dialog.show();
+
     }
 
     @Override

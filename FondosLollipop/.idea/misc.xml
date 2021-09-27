@@ -7,6 +7,7 @@
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/drawable-anydpi/imagen_ico.xml" value="0.2703125" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/drawable-anydpi/vista_ico_item.xml" value="0.2703125" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/drawable/btn_personalizado.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/drawable/btn_personalizado_dos.xml" value="0.140625" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_agregar_musica.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_agregar_pelicula.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/activity_agregar_series.xml" value="0.25416666666666665" />
@@ -26,7 +27,7 @@
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_inicio_admin.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_inicio_cliente.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_lista_admin.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_perfil_admin.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_perfil_admin.xml" value="0.2" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/fragment_registro_admin.xml" value="0.30275229357798167" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/item_musica.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Andres/AndroidStudioProjects/FondosLollipop/app/src/main/res/layout/item_pelicula.xml" value="0.25416666666666665" />

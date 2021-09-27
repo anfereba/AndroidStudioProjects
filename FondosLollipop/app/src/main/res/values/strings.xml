@@ -94,6 +94,25 @@
     <string name="Dos_Columnas">2 Columnas</string>
     <string name="Tres_Columnas">3 Columnas</string>
 
+    <!-- Perfil -->
+    <string name="PERFILADRMINISTRADORTXT">Mi Perfil</string>
+    <string name="MIINFORMACIONTXT">Mi Informacion</string>
+    <string name="UIDPERFILTXT">Uid: </string>
+    <string name="UIDPERFIL"> -- </string>
+    <string name="NOMBRESPERFILTXT">Nombres: </string>
+    <string name="NOMBRESPERFIL"> -- </string>
+    <string name="APELLIDOSPERFILTXT">Apellidos: </string>
+    <string name="APELLIDOSPERFIL"> -- </string>
+    <string name="CORREOPERFILTXT">Correo: </string>
+    <string name="CORREOPERFIL"> -- </string>
+    <string name="PASSWORDPERFILTXT">Password: </string>
+    <string name="PASSWORDPERFIL"> -- </string>
+    <string name="EDADPERFILTXT">Edad: </string>
+    <string name="EDADPERFIL"> -- </string>
+    <string name="ACTUALIZARPASS">Actualizar Password: </string>
+    <string name="ACTUALIZARDATOS">Actualizar Datos: </string>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
